@@ -1,0 +1,87 @@
+% This must be in the first 5 lines to tell arXiv to use pdfLaTeX, which is strongly recommended.
+\pdfoutput=1
+% In particular, the hyperref package requires pdfLaTeX in order to break URLs across lines.
+
+\documentclass[11pt]{article}
+\usepackage[review]{EMNLP2023}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{microtype}
+\usepackage{inconsolata}
+\usepackage{tabularray}
+\usepackage{tikz}
+
+\definecolor{color1}{HTML}{003F5C}
+\definecolor{color2}{HTML}{374C80}
+\definecolor{color3}{HTML}{00B7EB}
+\definecolor{color4}{HTML}{BC5090}
+\definecolor{color5}{HTML}{EF5675}
+\definecolor{color6}{HTML}{FF764A}
+\definecolor{color7}{HTML}{FFA600}
+
+\UseTblrLibrary{booktabs}
+
+\usetikzlibrary{positioning, arrows.meta, calc, shapes, fit}
+
+% If the title and author information does not fit in the area allocated, uncomment the following
+%
+%\setlength\titlebox{<dim>}
+%
+% and set <dim> to something 5cm or larger.
+
+\title{Can an NLP Paper Be this Groundbreaking?}
+
+% Author information can be set in various styles:
+% For several authors from the same institution:
+% \author{Author 1 \and ... \and Author n \\
+%         Address line \\ ... \\ Address line}
+% if the names do not fit well on one line use
+%         Author 1 \\ {\bf Author 2} \\ ... \\ {\bf Author n} \\
+% For authors from different institutions:
+% \author{Author 1 \\ Address line \\  ... \\ Address line
+%         \And  ... \And
+%         Author n \\ Address line \\ ... \\ Address line}
+% To start a seperate ``row'' of authors use \AND, as in
+% \author{Author 1 \\ Address line \\  ... \\ Address line
+%         \AND
+%         Author 2 \\ Address line \\ ... \\ Address line \And
+%         Author 3 \\ Address line \\ ... \\ Address line}
+
+\author{First Author \\
+  Affiliation / Address line 1 \\
+  Affiliation / Address line 2 \\
+  Affiliation / Address line 3 \\
+  \texttt{email@domain} \\\And
+  Second Author \\
+  Affiliation / Address line 1 \\
+  Affiliation / Address line 2 \\
+  Affiliation / Address line 3 \\
+  \texttt{email@domain} \\}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+
+  The abstract goes here.
+
+\end{abstract}
+
+\input{sections/1-introduction.tex}
+\input{sections/2-background.tex}
+\input{sections/3-methodology.tex}
+\input{sections/4-results.tex}
+\input{sections/5-discussion.tex}
+\input{sections/6-future_directions.tex}
+
+% Entries for the entire Anthology, followed by custom entries
+\bibliographystyle{acl_natbib}
+\bibliography{bib/anthology, bib/custom}
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
